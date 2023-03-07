@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "2cf9aedb-9d22-490b-ae99-8287a761cc01",
+		"name": "broadcast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Imageboard",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/imageboard/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"imageboard",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "initials",
+									"value": "v",
+									"type": "default"
+								},
+								{
+									"key": "name",
+									"value": "video games",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "all about video games",
+									"type": "default"
+								},
+								{
+									"key": "banner_image",
+									"type": "file",
+									"src": "/home/rameshwar/Downloads/test_banner.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/imageboard/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"imageboard",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Thread",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/v/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"v",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/v/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"v",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/v/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"v",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reply",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Echo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/echo",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"echo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Echo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/echo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"echo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 07 Mar 2023 07:26:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"server is live\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8000/api",
+			"type": "default"
+		}
+	]
+}
