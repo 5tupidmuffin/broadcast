@@ -35,6 +35,7 @@
 ## CAN BE IMPROVED:
 
 1. Dockerize the whole thing
+1. Only allow to Add Imageboards from the admin Panel
 1. Change DB to MySQL
 1. update ui when new thread gets added or new reply is added
 1. add pagination for threads and thread details page
