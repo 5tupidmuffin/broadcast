@@ -24,4 +24,4 @@ class Reply(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=30, default="Anonymous")
     body = models.TextField(max_length=200, blank=True, null=True)
-    image = models.ImageField(upload_to="reply_images/")
+    image = models.ImageField(upload_to="reply_images/", blank=True, null=True)
