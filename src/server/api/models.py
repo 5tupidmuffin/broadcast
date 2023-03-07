@@ -15,7 +15,7 @@ class Thread(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=30, default="Anonymous")
     title = models.CharField(max_length=50)
-    body = models.TextField(max_length=200, blank=True, null=True)
+    body = models.TextField(max_length=200)
     image = models.ImageField(upload_to="thread_images/")
 
 
