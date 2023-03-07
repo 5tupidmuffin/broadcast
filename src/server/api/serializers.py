@@ -29,10 +29,11 @@ class ThreadListSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def get_threads(self, obj):
+        serializer_context = {"request": self.context.get("request")}
         threads = models.Thread.objects.filter(imageboard__initials=obj.initials)
         if not threads.exists():
             return []
-        return ThreadSerializer(threads, many=True).data
+        return ThreadSerializer(threads, many=True, context=serializer_context).data
 
 
 class ThreadDetailSerializer(serializers.ModelSerializer):
