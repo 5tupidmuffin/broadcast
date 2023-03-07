@@ -1,0 +1,24 @@
+@import "../../../styles/variables.scss";
+
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: $dark-green;
+  border-bottom: 3px solid $groove-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+  }
+  .title {
+    margin: 0;
+    text-decoration: none;
+    color: $groove-green;
+    font-weight: 700;
+    font-size: 2rem;
+    &:hover {
+      color: white;
+    }
+  }
+}

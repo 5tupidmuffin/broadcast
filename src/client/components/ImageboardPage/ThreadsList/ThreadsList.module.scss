@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.threadList {
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    width: 95%;
+  }
+  .threadCard {
+    width: 100%;
+    border: 1px solid $groove-green;
+    margin-bottom: 1rem;
+    .metaDetails {
+      p {
+        padding-left: 0.5rem;
+        font-weight: 600;
+        margin: 0;
+        color: white;
+        background-color: $groove-green;
+      }
+      .threadId {
+        color: $danger-red;
+        font-style: italic;
+      }
+      .createdAt {
+      }
+    }
+    .threadImageContainer {
+      padding: 1rem 1rem;
+      img {
+        height: 10rem;
+      }
+    }
+    .rightText {
+      color: white;
+      p {
+        margin: 0;
+      }
+
+      .threadTitle {
+        font-weight: 600;
+      }
+      .threadBody {
+        font-style: italic;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../styles/variables.scss";
+
+.imageboardList {
+  padding: 2rem;
+  .heading {
+    margin: 0;
+    color: $groove-green;
+  }
+  a {
+    text-decoration: none;
+  }
+  .imageboardListContainer {
+    li {
+      margin: 0;
+      color: $groove-green;
+      font-size: 1.2rem;
+      &:hover {
+        color: white;
+        text-decoration: none !important;
+      }
+    }
+  }
+}

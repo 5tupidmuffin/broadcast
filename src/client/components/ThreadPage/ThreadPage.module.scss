@@ -1,0 +1,88 @@
+@import "../../styles/variables.scss";
+
+.parentThread {
+  width: 100%;
+  border-bottom: 1px solid $groove-green;
+  margin-bottom: 1rem;
+  .metaDetails {
+    p {
+      padding-left: 0.5rem;
+      font-weight: 600;
+      margin: 0;
+      color: white;
+      background-color: $groove-green;
+    }
+    .threadId {
+      color: $danger-red;
+      font-style: italic;
+    }
+    .createdAt {
+    }
+  }
+  .threadImageContainer {
+    padding: 1rem 1rem;
+    img {
+      height: 10rem;
+    }
+  }
+  .rightText {
+    color: white;
+    p {
+      margin: 0;
+    }
+
+    .threadTitle {
+      font-weight: 600;
+    }
+    .threadBody {
+      font-style: italic;
+    }
+  }
+}
+
+.repliesList {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .replyCard {
+    width: 95%;
+    border: 1px solid white;
+    margin-bottom: 1rem;
+    .metaDetails {
+      p {
+        padding-left: 0.5rem;
+        font-weight: 600;
+        margin: 0;
+        color: $groove-green;
+        background-color: white;
+      }
+      .threadId {
+        color: black;
+        font-style: italic;
+      }
+      .createdAt {
+      }
+    }
+    .threadImageContainer {
+      padding: 1rem 1rem;
+      img {
+        height: 10rem;
+      }
+    }
+    .rightText {
+      color: white;
+      p {
+        margin: 0;
+      }
+
+      .threadTitle {
+        font-weight: 600;
+      }
+      .threadBody {
+        font-style: italic;
+      }
+    }
+  }
+}

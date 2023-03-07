@@ -1,0 +1,60 @@
+@import "../../../styles/variables.scss";
+
+.newReplyFormContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .formTitle {
+    font-size: 1.2rem;
+    color: $groove-green;
+  }
+  form {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    label {
+      font-size: 0.9rem;
+      color: $groove-green;
+    }
+    input[type="text"] {
+      width: 80%;
+      background-color: $dark-green;
+      margin-bottom: 0.8rem;
+      color: white;
+      font-size: 0.9rem;
+      border: none;
+      border-bottom: 1px solid $groove-green;
+      &:focus {
+        outline: none;
+      }
+    }
+    input[type="file"] {
+      margin: 0.8rem;
+    }
+    textarea {
+      width: 80%;
+      background-color: $dark-green;
+      color: white;
+      font-size: 0.9rem;
+      border: 1px solid $groove-green;
+      &:focus {
+        outline: none;
+      }
+    }
+    .newReplyBtn {
+      font-size: 1.2rem;
+      font-family: "Space Grotesk";
+      border: none;
+      padding: 0.2rem 1rem;
+      margin: 1rem;
+      color: $dark-green;
+      background-color: $groove-green;
+      border-radius: 5px;
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+}

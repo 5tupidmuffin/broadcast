@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.imageboardDetails {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $faint-yellow;
+  .imageboardTitle {
+  }
+  .bannerImageContainer {
+    position: relative;
+    height: 10rem;
+    width: 80%;
+    img {
+      object-fit: contain;
+    }
+  }
+}
