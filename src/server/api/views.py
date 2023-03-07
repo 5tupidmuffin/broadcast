@@ -26,7 +26,9 @@ class ThreadList(APIView):
     def get(self, request: Request, *args, **kwargs) -> Response:
         imageboard_initials = kwargs["initials"]
         thread = get_object_or_404(models.Imageboard, initials=imageboard_initials)
-        serializer = serializers.ThreadListSerializer(thread)
+        serializer = serializers.ThreadListSerializer(
+            thread, context={"request": request}
+        )
         return Response(serializer.data)
 
     def post(self, request: Request, *args, **kwargs) -> Response:
@@ -47,7 +49,11 @@ class ThreadDetail(APIView):
             return Response(
                 {"error": "no such thread exists"}, status=status.HTTP_404_NOT_FOUND
             )
-        return Response(serializers.ThreadDetailSerializer(thread).data)
+        return Response(
+            serializers.ThreadDetailSerializer(
+                thread, context={"request": request}
+            ).data
+        )
 
     def post(self, request: Request, *args, **kwargs) -> Response:
         serializer = serializers.ReplySerializer(data=request.data)
