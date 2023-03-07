@@ -44,7 +44,8 @@ class ThreadDetailSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def get_replies(self, obj):
+        serializer_context = {"request": self.context.get("request")}
         replies = models.Reply.objects.filter(pk=obj.id)
         if not replies.exists():
             return []
-        return ReplySerializer(replies, many=True).data
+        return ReplySerializer(replies, many=True, context=serializer_context).data
